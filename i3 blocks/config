@@ -1,0 +1,64 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+# GPU Temperature
+[gpu]
+label=<span color='#00c0d6'> </span>
+markup=pango
+DECIMALS=0
+command=~/.config/i3blocks/blocklets/gpu.sh
+interval=1
+
+# CPU Temperature
+[cpu]
+label=<span color='#04ff00'> </span>
+markup=pango
+DECIMALS=0
+command=~/.config/i3blocks/blocklets/cpu.sh
+interval=1
+
+# Free Space
+[disk]
+label=<span color='#00fbff'> </span>
+markup=pango
+DECIMALS=0
+command=~/.config/i3blocks/blocklets/disk.sh
+interval=1
+
+# Memory Usage
+[ram]
+label=<span color='#0088ff'> </span>
+markup=pango
+DECIMALS=0
+command=~/.config/i3blocks/blocklets/ram.sh
+interval=1
+
+#CPU Usage
+[cpu_usage]
+label=<span color='#00ffcc'> </span>
+markup=pango
+min_width=40
+DECIMALS=0
+command=~/.config/i3blocks/blocklets/cpu_usage.sh
+interval=1
+
+# Network Status
+[net]
+markup=pango
+command=~/.config/i3blocks/blocklets/net.sh
+interval=1
+
+[time]
+command=~/.config/i3blocks/blocklets/datesuffix.sh
+markup=pango
+interval=1
+
