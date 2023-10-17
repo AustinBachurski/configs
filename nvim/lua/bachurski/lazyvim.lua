@@ -9,22 +9,25 @@ if not vim.loop.fs_stat(lazypath) then
         lazypath,
     })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     "nvim-treesitter/nvim-treesitter",
-    --
-    --- Uncomment these if you want to manage LSP servers from neovim
-    {'williamboman/mason.nvim'},
-    {'williamboman/mason-lspconfig.nvim'},
+
+    -- LSP
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
     {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
+    'neovim/nvim-lspconfig',
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/nvim-cmp',
+    'L3MON4D3/LuaSnip',
 
+    -- Colorscheme
+    "EdenEast/nightfox.nvim",
 
-    { "EdenEast/nightfox.nvim" },
+    -- Telescope
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         dependencies = { 'nvim-lua/plenary.nvim' }
