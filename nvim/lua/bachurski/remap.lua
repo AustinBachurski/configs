@@ -10,12 +10,9 @@ vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>p", "\"+p")
 
-vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
-
 vim.keymap.set("n", "<C-y>", "gg\"+yG")
 
-vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
 
 vim.keymap.set("n", "n", "nzz")
