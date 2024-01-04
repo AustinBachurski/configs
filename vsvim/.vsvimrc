@@ -1,0 +1,32 @@
+:set number
+:set relativenumber
+:set scrolloff=8
+:set tabstop=4
+:set softtabstop = 4
+:set shiftwidth=4
+:set expandtab
+:set hlsearch
+:set incsearch
+
+
+let mapleader=" "
+
+nnoremap <leader>ft :Vex<CR>
+nnoremap <leader>/ :noh<CR>
+nnoremap <leader>Y gg"+yG
+nnoremap <leader>p "_dP
+nnoremap <C-y> ggVG"+y
+nnoremap n nzz
+nnoremap N Nzz
+
+vnoremap <leader>y "+y
+vnoremap <leader>p "_dP
+vnoremap <leader>d "_d
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+vnoremap J :m '>+1<CR>gv=gvzz
+vnoremap K :m '<-2<CR>gv=gvzz
+vnoremap < <gv
+vnoremap > >gv
