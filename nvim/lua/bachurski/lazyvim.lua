@@ -13,7 +13,29 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    "nvim-treesitter/nvim-treesitter",
+    -- TreeSitter
+    {"nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function ()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+          ensure_installed = {
+                    "asm", "awk", "bash", "c", "c_sharp",
+                    "cmake", "cpp", "css", "csv", "dockerfile",
+                    "doxygen", "gitattributes", "gitignore",
+                    "html", "java", "javascript", "json", "lua",
+                    "markdown", "Path of Exile item filter",
+                    "python", "regex", "rust", "ssh_config",
+                    "toml", "typescript", "vim", "vimdoc",
+                    "xml", "yaml", "zig"
+                    },
+          sync_install = false,
+          highlight = { enable = true },
+          indent = { enable = true },
+        })
+    end
+    },
 
     -- LSP
     'williamboman/mason.nvim',
